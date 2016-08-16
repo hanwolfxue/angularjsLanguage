@@ -1,0 +1,36 @@
+<style>
+    .flex-container {
+        display: -webkit-flex;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: lightgrey;
+    }
+    .flex-item {
+        background-color: cornflowerblue;
+        width: 50%;
+        height: 100%;
+    }
+    span{
+        cursor: pointer;
+    }
+    .resolve {
+        text-align: center;
+        height: 400px;
+        background-color: #00FF00;
+        line-height: 50px;
+    }
+</style>
+<div>
+    <div class="flex-container">
+        <div class="flex-item">
+            <button ng-click="changeCN()">切换成中文</button>
+        </div>
+        <div class="flex-item">
+            <button ng-click="changeUS()">切换成英文</button>
+        </div>
+    </div>
+    <div class="resolve">{{'content' | translate}}</div>
+</div>
